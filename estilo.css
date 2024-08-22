@@ -130,9 +130,3 @@
     text-align: right;
   }
   
-  .footer {
-    text-align: center;
-    padding: var(--footer-padding);
-    background-color: var(--primary-color);
-    color: var(--white);
-  }
