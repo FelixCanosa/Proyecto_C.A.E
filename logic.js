@@ -2,9 +2,10 @@ const BACKEND_URL = 'https://felixcanosa1.pythonanywhere.com/chatbot';
 
 async function sendMessage() {
     const userInput = document.getElementById('userInput').value;
-    const chatbox = document.getElementById('chatbox');
+    if (!userInput.trim()) return;
 
     appendMessage('Tú', userInput);
+    document.getElementById('userInput').value = '';
 
     try {
         const response = await fetch(BACKEND_URL, {
@@ -20,13 +21,15 @@ async function sendMessage() {
         }
 
         const data = await response.json();
-        appendMessage('Chatbot', data.response);
+        if (data && data.response) {
+            appendMessage('Chatbot', data.response);
+        } else {
+            throw new Error('Respuesta inválida del servidor');
+        }
     } catch (error) {
         console.error('Error:', error);
-        appendMessage('Error', 'No se pudo conectar con el chatbot.');
+        appendMessage('Error', 'No se pudo conectar con el chatbot. Por favor, intenta de nuevo más tarde.');
     }
-
-    document.getElementById('userInput').value = '';
 }
 
 function appendMessage(sender, message) {
