@@ -2,12 +2,13 @@ const BACKEND_URL = 'https://felixcanosa1.pythonanywhere.com/chatbot';
 
 async function sendMessage() {
     const userInput = document.getElementById('userInput').value;
-    if (!userInput.trim()) return;
+    const chatbox = document.getElementById('chatbox');
 
+    // Mostrar el mensaje del usuario
     appendMessage('Tú', userInput);
-    document.getElementById('userInput').value = '';
 
     try {
+        // Llamar a la API del chatbot
         const response = await fetch(BACKEND_URL, {
             method: 'POST',
             headers: {
@@ -21,15 +22,16 @@ async function sendMessage() {
         }
 
         const data = await response.json();
-        if (data && data.response) {
-            appendMessage('Chatbot', data.response);
-        } else {
-            throw new Error('Respuesta inválida del servidor');
-        }
+
+        // Mostrar la respuesta del chatbot
+        appendMessage('Chatbot', data.response);
     } catch (error) {
         console.error('Error:', error);
-        appendMessage('Error', 'No se pudo conectar con el chatbot. Por favor, intenta de nuevo más tarde.');
+        appendMessage('Error', 'No se pudo conectar con el chatbot.');
     }
+
+    // Limpiar el input
+    document.getElementById('userInput').value = '';
 }
 
 function appendMessage(sender, message) {
@@ -37,6 +39,7 @@ function appendMessage(sender, message) {
     const messageElement = document.createElement('div');
     messageElement.className = sender.toLowerCase() === 'tú' ? 'user-message' : 'ai-message';
 
+    // Convertir Markdown a HTML si el sender es 'Chatbot'
     const formattedMessage = sender === 'Chatbot' ? marked.parse(message) : escapeHtml(message);
 
     messageElement.innerHTML = `<strong>${sender}:</strong> ${formattedMessage}`;
@@ -53,6 +56,7 @@ function escapeHtml(unsafe) {
          .replace(/'/g, "&#039;");
 }
 
+// Evento para enviar mensaje al presionar Enter
 document.getElementById('userInput').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         sendMessage();
