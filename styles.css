@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#game-container {
+    margin-bottom: 20px;
+}
+
+#chatbox {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.input-container {
+    display: flex;
+    width: 400px;
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+.user-message { 
+    color: blue; 
+    margin-bottom: 10px;
+}
+
+.ai-message { 
+    color: green; 
+    margin-bottom: 10px;
+}
