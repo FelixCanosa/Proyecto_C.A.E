@@ -1,5 +1,13 @@
 const BACKEND_URL = 'https://felixcanosa1.pythonanywhere.com/chatbot';
 
+function showLoadingAnimation() {
+    document.getElementById('loadingAnimation').style.display = 'flex';
+}
+
+function hideLoadingAnimation() {
+    document.getElementById('loadingAnimation').style.display = 'none';
+}
+
 async function sendMessage() {
     const userInput = document.getElementById('userInput').value;
     const chatbox = document.getElementById('chatbox');
@@ -8,6 +16,8 @@ async function sendMessage() {
     appendMessage('Tú', userInput);
 
     try {
+        showLoadingAnimation(); // Mostrar animación de carga
+
         // Llamar a la API del chatbot
         const response = await fetch(BACKEND_URL, {
             method: 'POST',
@@ -28,6 +38,8 @@ async function sendMessage() {
     } catch (error) {
         console.error('Error:', error);
         appendMessage('Error', 'No se pudo conectar con el chatbot.');
+    } finally {
+        hideLoadingAnimation(); // Ocultar animación de carga
     }
 
     // Limpiar el input

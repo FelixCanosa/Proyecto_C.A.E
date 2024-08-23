@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <title>Página de Chatbot</title>
-    <style>
-
-    </style>
 </head>
 <body>
-        
     <div class="container">
         <div class="sidebar">
             <ul>
                 <li>Hablar con Profesionales</li>
                 <li>Números de Ayuda</li>
-                <li >Opciones</li>
+                <li>Opciones</li>
             </ul>
         </div>
         <div class="main-content">
@@ -29,15 +25,18 @@
                 <input type="text" id="userInput" placeholder="Envía un mensaje a Chatbot">
                 <button id="sendButton" onclick="sendMessage()">➤</button>
             </div>
+            <div class="loading-animation" id="loadingAnimation">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </div>
     <div class="user-info">
-        <button>fd</button>
         <div>Tu Nombre</div>
         <div>Info</div>
         <div>Ajustes de cuenta</div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="logic.js"></script>
