@@ -16,6 +16,21 @@
             padding: 10px;
             overflow-x: auto;
         }
+        #centrado{
+            text-align: center;
+        }
+        #escalado {
+            transform: scale(1.2);
+            margin-bottom: 5rem;
+            margin-top: 2rem;
+        }
+        .span {
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
+        .span:hover {
+            transform: scale(1.5); 
+        }
     </style>
 </head>
 
@@ -98,41 +113,58 @@
         </div>
 
         <h2>Diagrama de PERT 1, Back-end</h2>
-        <div class="mermaid">
+        <div class="text">
+            <p>Los elementos críticos estan representados con un fondo rojo anaranjado.</p>
+        </div>
+        <div class="mermaid" id="centrado">
             graph TD
-            A((Inicio)) -->|2024-08-07| B((Login))
-            A -->|2024-08-07| C((Verificación))
-            B -->|2024-09-23| D((Base de Datos))
-            C -->|2024-09-23| D
-            D -->|2024-10-07| E((Bugs))
-            D -->|2024-10-07| F((Documento Legal))
-            D -->|2024-10-14| G((Filtros))
-            E -->|2024-10-14| H((Creación IA))
-            F -->|2024-10-14| H
-            G -->|2024-10-14| H
-            H -->|2024-10-28| I((Personalidad IA))
-            H -->|2024-10-28| J((Entrenamiento IA))
-            I -->|2024-11-04| K((Implementación IA))
-            J -->|2024-11-04| K
-            K -->|2024-11-18| L((Fin))
+            A((<span class="span">Inicio</span>)) -->|2024-08-07| B((Login<br/>5 días<br/>07/08 - 11/08))
+            A -->|2024-08-07| C((Verificación<br/>10 días<br/>07/08 - 18/08))
+            B -->|2024-08-19| D((Base de Datos<br/>10 días<br/>19/08 - 30/08))
+            C -->|2024-08-19| D
+            D -->|2024-09-02| E((Bugs<br/>5 días<br/>02/09 - 06/09))
+            D -->|2024-09-02| F((Documento Legal<br/>10 días<br/>02/09 - 13/09))
+            D -->|2024-09-09| G((Filtros<br/>5 días<br/>09/09 - 13/09))
+            E -->|2024-09-16| H((Creación IA<br/>15 días<br/>16/09 - 04/10))
+            F -->|2024-09-16| H
+            G -->|2024-09-16| H
+            H -->|2024-10-07| I((Personalidad IA<br/>5 días<br/>07/10 - 11/10))
+            H -->|2024-10-07| J((Entrenamiento IA<br/>15 días<br/>07/10 - 25/10))
+            I -->|2024-10-28| K((Implementación IA<br/>5 días<br/>28/10 - 01/11))
+            J -->|2024-10-28| K
+            K -->|2024-11-04| L((<span class="span">Fin</span>))
         
+            classDef critical fill:#ff6347,stroke:#333,stroke-width:2px;
+            classDef milestone fill:#ffd700,stroke:#333,stroke-width:2px;
+            classDef normal fill:#ffffff,stroke:#333,stroke-width:1px;
         
+            class A,L milestone;
+            class B,C,D,E,F,G,H,J,K critical;
+            class I normal;
+        
+            linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12 stroke:#333,stroke-width:1px;
         </div>
 
         <h2>Diagrama de PERT 2, Front-End</h2>
-        <div class="mermaid">
+        <div class="mermaid" id="escalado">
             graph LR
-            A((Inicio)) -->|2024-08-07| B((Maquetado))
-            A -->|2024-08-12| C((Organización))
-            B -->|2024-08-14| D((Planeación))
-            C -->|2024-08-14| D
-            D -->|2024-08-19| E((Diseño))
-            E -->|2024-09-02| F((HTML/CSS))
-            F -->|2024-09-16| G((Conexión Backend))
-            G -->|2024-11-11| H((Conexión Chat))
-            H -->|2024-11-18| I((Fin))
-        
+    A((<span class="span">Inicio</span>)) -->|<span class="span">2024-08-07</span>| B((<span class="span">Maquetado<br/>07/08 - 14/08</span>))
+    A -->|<span class="span">2024-08-12</span>| C((<span class="span">Organización<br/>12/08 - 16/08</span>))
+    B -->|<span class="span">2024-08-14</span>| D((<span class="span">Planeación<br/>14/08 - 21/08</span>))
+    C -->|<span class="span">2024-08-16</span>| D
+    D -->|<span class="span">2024-08-21</span>| E((<span class="span">Diseño<br/>19/08 - 13/09</span>))
+    E -->|<span class="span">2024-09-02</span>| F((<span class="span">HTML/CSS<br/>02/09 - 16/09</span>))
+    F -->|<span class="span">2024-09-16</span>| G((<span class="span">Conexión Backend<br/>16/09 - 27/09</span>))
+    G -->|<span class="span">2024-09-27</span>| H((<span class="span">Conexión Chat<br/>11/11 - 18/11</span>))
+    H -->|<span class="span">2024-11-18</span>| I((<span class="span">Fin</span>))
+
+    classDef critical fill:#ff6347,stroke:#333,stroke-width:2px;
+    classDef normal fill:#ffffff,stroke:#333,stroke-width:1px;
+
+    class A,I milestone;
+    class B,C,D,E,F,G,H critical;
         </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script>
