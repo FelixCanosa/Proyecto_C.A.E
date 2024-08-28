@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Gantt y PERT del Proyecto</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .mermaid {
+            width: 100%;
+            height: 100%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-4">Diagramas del Proyecto, Asitente de AI</h1>
+
+        <h2>Diagrama de Gantt</h2>
+        <div class="mermaid">
+            gantt
+            dateFormat YYYY-MM-DD
+            axisFormat %d/%m
+
+            section Planeación y Diseño:
+            Maquetado inicial (Diseño y distribución de elementos) :2024-08-07, 2024-08-14
+
+            Organización y distribución de los items de la página :2024-08-12, 2024-08-16
+
+            Planeación de las funciones de la página :2024-08-14, 2024-08-21
+
+            Diseño de página (Forma, colores, logo, nombre) :2024-08-19, 2024-09-13
+
+
+
+            section Desarrollo Front-End:
+            Estructurado en HTML y CSS :2024-09-02, 2024-09-16
+
+            Establecer conexiones con el back-end :2024-09-16, 2024-09-27
+
+
+
+            section Desarrollo Back-End:
+            Establecimiento de función login :2024-09-23, 2024-09-27
+
+            Establecer el sistema de verificación de usuario :2024-09-23, 2024-10-04
+
+            Creación y conexión de la base de datos (PHP o MySQL) :2024-09-30, 2024-10-11
+
+            Revisión de bugs :2024-10-07, 2024-10-11
+
+            Creación de documento con implicaciones legales de la IA :2024-10-07, 2024-10-18
+
+            Buscar formas de implementar filtros y prohibiciones :2024-10-14, 2024-10-18
+
+            Creación de la IA (En base a geminio o desde cero) :2024-10-14, 2024-11-01
+
+            Establecimiento de una personalidad para la IA :2024-10-28, 2024-11-01
+
+            Entrenamiento de la IA :2024-10-28, 2024-11-15
+
+
+            section Implementación de la IA:
+            Investigar formas de implementar la IA :2024-11-04, 2024-11-15
+
+            Conexión con el back-end :2024-11-11, 2024-11-18
+
+            Conexión con la caja de chat de la página :2024-11-18, 2024-11-22
+
+
+
+            section Primeras pruebas:
+            Pruebas de rendimiento con múltiples peticiones :2024-11-18, 2024-11-22
+
+            Pruebas de estabilidad :2024-11-25, 2024-11-29
+
+            Pruebas de los filtros y prohibiciones :2024-11-25, 2024-12-06
+
+
+
+            section Pruebas finales e Implementación:
+            Pruebas de la IA :2024-12-02, 2024-12-09
+
+            Pruebas finales de la estabilidad de conexiones :2024-12-02, 2024-12-16
+
+            Pruebas sobrecargando el servidor :2024-12-09, 2024-12-13
+
+            Pruebas finales de seguridad de las cuentas :2024-12-09, 2024-12-16
+
+            Pruebas finales de los filtros y prohibiciones :2024-12-16, 2024-12-23
+        </div>
+
+        <h2>Diagrama de PERT 1, Back-end</h2>
+        <div class="mermaid">
+            graph TD
+            A((Inicio)) -->|2024-08-07| B((Login))
+            A -->|2024-08-07| C((Verificación))
+            B -->|2024-09-23| D((Base de Datos))
+            C -->|2024-09-23| D
+            D -->|2024-10-07| E((Bugs))
+            D -->|2024-10-07| F((Documento Legal))
+            D -->|2024-10-14| G((Filtros))
+            E -->|2024-10-14| H((Creación IA))
+            F -->|2024-10-14| H
+            G -->|2024-10-14| H
+            H -->|2024-10-28| I((Personalidad IA))
+            H -->|2024-10-28| J((Entrenamiento IA))
+            I -->|2024-11-04| K((Implementación IA))
+            J -->|2024-11-04| K
+            K -->|2024-11-18| L((Fin))
+        
+        
+        </div>
+
+        <h2>Diagrama de PERT 2, Front-End</h2>
+        <div class="mermaid">
+            graph LR
+            A((Inicio)) -->|2024-08-07| B((Maquetado))
+            A -->|2024-08-12| C((Organización))
+            B -->|2024-08-14| D((Planeación))
+            C -->|2024-08-14| D
+            D -->|2024-08-19| E((Diseño))
+            E -->|2024-09-02| F((HTML/CSS))
+            F -->|2024-09-16| G((Conexión Backend))
+            G -->|2024-11-11| H((Conexión Chat))
+            H -->|2024-11-18| I((Fin))
+        
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+
+</html>
