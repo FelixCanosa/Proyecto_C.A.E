@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/chat/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/chat/chat.css">
     <title>Página de Chatbot</title>
 </head>
 <body>
@@ -18,25 +19,24 @@
         </div>
         <div class="main-content">
             <div class="header">
-                <div class="logo"></div>
-                <div class="description">Chatbot de Apoyo Emocional</div>
+                <div class="logo"><img src="/img/logoIA.png" alt="logo"></div>
+                <div class="description">SEIA</div>
             </div>
             <div id="chatbox"></div>
-            <div class="input-container">
-                <input type="text" id="userInput" placeholder="Envía un mensaje a Chatbot">
-                <button id="sendButton" onclick="sendMessage()">➤</button>
-            </div>
             <div class="loading-animation" id="loadingAnimation">
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
             </div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Envía un mensaje a Chatbot">
+                <button id="sendButton" onclick="sendMessage()">➤</button>
+            </div>
+    
         </div>
     </div>
     <div class="user-info">
-        <div>Tu Nombre</div>
-        <div>Info</div>
-        <div>Ajustes de cuenta</div>
+        <i class="fas fa-user usuario-icono"></i>
     </div>
 
     

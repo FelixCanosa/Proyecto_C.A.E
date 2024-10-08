@@ -1,4 +1,9 @@
 :root {
+  --color-principal:#F0F0F3;
+  --letras:#808B9F;
+  --color-luminoso:#FFFFFF;
+  --color-oscuro:rgba(174, 174, 192, 0, 4);
+
   --color-body:#F0F0F0;
   --container:#c4f3fc;
   --elemento-principal: #A6CFE2;
@@ -19,7 +24,7 @@ Botones secundarios y detalles: Rosa suave (#FFB6C1) o lavanda (#D8BFD8)
   padding: 0px;
 }
 body {
-  background-color: var(--color-body);
+  background-color: var(--color-principal);
 }
 
 .roboto-mono-body {
@@ -39,12 +44,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    }
    
-   .logo {
+   /* .logo {
     margin-right: 5px;
     background: #236209;
     box-shadow: inset 5px 5px 6px #1e5508,
             inset -5px -5px 6px #286f0a;
-   }
+   } */
    
    .logo-img {
     width: 75px;
@@ -68,9 +73,9 @@ body {
    }
    
    .menu-item:hover {
-    color: #4CAF50;
+    color: white;
    }
-   
+   /* icono de usuario */
    .usuario {
     margin-left: 20px;
     position: relative;
@@ -138,6 +143,11 @@ body {
     border-radius: 10px;
     box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
    }
+
+   .menu-item:hover {
+    color: white;
+    background: linear-gradient(145deg, #636363, #636363);
+   }
    
    .navbar .usuario-icono {
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
@@ -184,7 +194,8 @@ body {
     margin: 3rem auto 0 auto;
     text-align: center;
     border-radius: 50px;
-    background: var(--container);
+    color: var(--letras);
+    background: var(--color-principal);
     box-shadow: inset 0 0 0 color;
     box-shadow:  6px 6px 0px #bebebe,
                 -6px -6px 0px #ffffff;
@@ -202,7 +213,7 @@ body {
     border-radius: 50px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    background: var(--container);
+    background: var(--color-principal);
     box-shadow:  6px 6px 0px #bebebe,
                 -6px -6px 0px #ffffff;
   }
