@@ -3,6 +3,7 @@
   --secondary-color: #4a6b6b;
   --light-color: white;
   --dark-color: #aaaaaa;
+  --user-mensage-color:#a8eed7;
 
   --accent-color: #7fffd4;
   --letras:#808B9F;
@@ -121,12 +122,16 @@ body, html {
 
 .user-message {
   align-self: flex-end;
-  background-color: var(--accent-color);
+  width: auto;
+  height: auto  ;
+  background-color:var(--user-mensage-color);
+  box-shadow: 10px 10px 30px var(--dark-color);
 }
 
 .ai-message {
   align-self: flex-start;
   background-color: var(--white);
+  box-shadow: 10px 10px 30px var(--dark-color);
 }
 
 .input-container {
@@ -139,7 +144,7 @@ body, html {
   padding: var(--input-padding);
   border: none;
   border-radius: var(--message-border-radius);
-  color: var(--letras);
+  color: var(black);
 }
 
 @keyframes pulse {
@@ -168,10 +173,6 @@ body, html {
 
 #sendButton:hover {
   animation: pulse 1s infinite;
-}
-
-#loadingAnimation{
-
 }
 
 .user-info {
