@@ -3,6 +3,15 @@
   --letras:#808B9F;
   --color-luminoso:#FFFFFF;
   --color-oscuro:rgba(174, 174, 192, 0, 4);
+  --dark-color: #aaaaaa;
+  /* --primary-color: #F0F0F3;
+  --secondary-color: #4a6b6b;
+  --light-color: white;
+  --dark-color: #aaaaaa;
+  --user-mensage-color:#a8eed7;
+
+  --accent-color: #7fffd4;
+  --letras:#808B9F; */
 
   --color-body:#F0F0F0;
   --container:#c4f3fc;
@@ -190,7 +199,7 @@ body {
 
   .containerText {
     width: 80%;
-    height: 200px;
+    height: auto;
     margin: 3rem auto 0 auto;
     text-align: center;
     border-radius: 50px;
@@ -207,7 +216,7 @@ body {
 
   .containerTextLeft {
     width: 80%;
-    height: 200px;
+    height: 200px; /* modificar despues de agragar contenido*/
     margin: 4rem auto 0 0px;
     text-align: center;
     border-radius: 50px;
@@ -216,4 +225,39 @@ body {
     background: var(--color-principal);
     box-shadow:  6px 6px 0px #bebebe,
                 -6px -6px 0px #ffffff;
+  }
+
+ 
+
+
+  /* Estilos personalizados para el botón neomorfista */
+  .btn-neomorph {
+    background-color: #e0e0e0; /* Color de fondo suave */
+    border-radius: 12px;
+    box-shadow: 18px 18px 15px #bebebe,
+                -8px -8px 15px #ffffff;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight:bold ;
+  }
+
+  .btn-neomorph a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Efecto al hacer hover: el botón parece "levantarse" */
+  .btn-neomorph:hover {
+    box-shadow: 4px 4px 10px #bebebe,
+                -4px -4px 10px #ffffff;
+    background-color: #bff578;
+  }
+  /* Efecto al hacer clic: el botón parece "presionado" */
+  .btn-neomorph:active {
+    box-shadow: inset 4px 4px 10px #bebebe,
+                inset -4px -4px 10px #ffffff;
   }
