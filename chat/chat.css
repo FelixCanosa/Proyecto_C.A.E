@@ -48,7 +48,7 @@ body, html {
   padding: 0;
 }
 
-.sidebar li {
+.sidebar ul li {
   margin-bottom: 15px;
   padding: 4px;
   border-radius: 10px;
@@ -64,9 +64,10 @@ body, html {
   
 }
 
-.sidebar li a {
+.sidebar a {
   text-decoration: none;
   color: var(--letras);
+  background-color: #7fffd4;
 }
 
 .main-content {
