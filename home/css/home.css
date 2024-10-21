@@ -206,7 +206,9 @@ header{
   }
 
   /* Main */
-
+  main {
+    position: relative;
+  }
   .containerText {
     width: 80%;
     height: auto;
@@ -270,4 +272,20 @@ header{
   .btn-neomorph:active {
     box-shadow: inset 4px 4px 10px #bebebe,
                 inset -4px -4px 10px #ffffff;
+  }
+
+  .ContainerCat {
+    position: absolute;
+    width: 140px;
+    height: 155px;
+    z-index: 2;
+    top: 0px;
+    left: 140px;
+  }
+
+  .GatAnimated {
+    margin: 0 auto;
+    width: 100%; 
+    height: auto;
+
   }
