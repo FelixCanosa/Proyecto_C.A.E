@@ -1,8 +1,8 @@
 :root {
-  --color-principal:#F0F0F3;
-  --letras:#808B9F;
-  --color-luminoso:#FFFFFF;
-  --color-oscuro:rgba(174, 174, 192, 0, 4);
+  --color-principal: #F0F0F3;
+  --letras: #808B9F;
+  --color-luminoso: #FFFFFF;
+  --color-oscuro: rgba(174, 174, 192, 0, 4);
   --dark-color: #aaaaaa;
   /* --primary-color: #F0F0F3;
   --secondary-color: #4a6b6b;
@@ -13,13 +13,13 @@
   --accent-color: #7fffd4;
   --letras:#808B9F; */
 
-  --color-body:#F0F0F0;
-  --container:#c4f3fc;
+  --color-body: #F0F0F0;
+  --container: #c4f3fc;
   --elemento-principal: #A6CFE2;
-  --color-container-text:#e0e0e0; 
-  --subtitulos:#666666;
-  --texto:#333333;
-  --botones:#D8BFD8;
+  --color-container-text: #e0e0e0;
+  --subtitulos: #666666;
+  --texto: #333333;
+  --botones: #D8BFD8;
   /*Fondo principal: Un blanco (#FFFFFF) o gris muy claro (#F0F0F0).
 Elementos principales: Azul suave (#A6CFE2) o verde menta (#A8D5BA) para encabezados, botones principales.
 Textos: Gris oscuro (#333333) para el cuerpo del texto y gris medio (#666666) para subtítulos.
@@ -32,6 +32,7 @@ Botones secundarios y detalles: Rosa suave (#FFB6C1) o lavanda (#D8BFD8)
   margin: 0px;
   padding: 0px;
 }
+
 body {
   background-color: var(--color-principal);
 }
@@ -39,253 +40,302 @@ body {
 .roboto-mono-body {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: 400; /* Ajusta el peso según tu necesidad (100, 200, 300, etc.) */
-  font-style: normal; /* Cambia a 'italic' si necesitas texto en cursiva */
+  font-weight: 400;
+  /* Ajusta el peso según tu necesidad (100, 200, 300, etc.) */
+  font-style: normal;
+  /* Cambia a 'italic' si necesitas texto en cursiva */
 }
-header{
+
+header {
   width: 100%;
   box-shadow: 1px 1px 1px var(--dark-color);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-   }
-   
-   /* .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* .logo {
     margin-right: 5px;
     background: #236209;
     box-shadow: inset 5px 5px 6px #1e5508,
             inset -5px -5px 6px #286f0a;
    } */
-   
-   .logoImg {
-    height: auto;
-    width: 75px;
-    
-    font-size:1.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px var(--dark-color);
-   }
-   
-   .menu {
-    list-style: none;
-    margin: 0 auto;
-    padding:0;
-    display: flex;
-    
-   }
-   
-   .menu-item {
-    padding: 0 0.5rem 0 0.5rem;
-    text-decoration: none;
-    color: #333;
-    margin: 20px;
-    transition: color 0.2s ease;
-   }
-   
-   .menu-item:hover {
-    color: white;
-   }
-   /* icono de usuario */
-   .usuario {
-    margin-left: 20px;
-    position: relative;
-   }
-   
-   .usuario-icono {
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-   }
-   
-   .usuario-dropdown {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   }
-   
-   .usuario-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-   }
-   
-   .usuario-dropdown li {
-    margin-bottom: 10px;
-   }
-   
-   .usuario-dropdown a {
-    text-decoration: none;
-    color: #333;
-   }
-   
-   .usuario-dropdown a:hover {
-    color: #4CAF50;
-   }
-   
-   .usuario-icono:hover + .usuario-dropdown {
-    display: block;
-   }
-   
-   .usuario-dropdown:hover {
-    display: block;
-   }
-   
-   /* Estilos para el efecto Neumorphism */
-   .navbar {
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    border-radius: 0px;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-   }
-   
-   .navbar .logo {
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
-   }
-   
-   .navbar .menu-item {
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
-   }
 
-   .menu-item:hover {
-    color: white;
-    background: linear-gradient(145deg, #636363, #636363);
-   }
-   
-   .navbar .usuario-icono {
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
-   }
+.logoImg {
+  height: auto;
+  width: 75px;
 
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--dark-color);
+}
 
-   .usuario {
-    display: block;
-    position: relative;
-  }
-  
-  .usuario-icono {
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .usuario-dropdown {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .usuario-icono:hover + .usuario-dropdown {
-    display: block;
-  }
-  
-  .usuario-dropdown:hover {
-    display: block;
-  }
+.menu {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
 
-  /* Main */
-  main {
-    position: relative;
-  }
-  .containerText {
-    width: 80%;
-    height: auto;
-    margin: 3rem auto 0 auto;
-    text-align: center;
-    border-radius: 50px;
-    color: var(--letras);
-    background: var(--color-principal);
-    box-shadow: inset 0 0 0 color;
-    box-shadow:  6px 6px 0px #bebebe,
-                -6px -6px 0px #ffffff;
-  }
+}
 
-  .containerText h1 {
-    margin-top: 1rem;
-  }
+.menu-item {
+  padding: 0 0.5rem 0 0.5rem;
+  text-decoration: none;
+  color: #333;
+  margin: 20px;
+  transition: color 0.2s ease;
+}
 
-  .containerTextLeft {
-    width: 80%;
-    height: 200px; /* modificar despues de agragar contenido*/
-    margin: 4rem auto 0 0px;
-    text-align: center;
-    border-radius: 50px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background: var(--color-principal);
-    box-shadow:  6px 6px 0px #bebebe,
-                -6px -6px 0px #ffffff;
-  }
+.menu-item:hover {
+  color: white;
+}
 
- 
+/* icono de usuario */
+.usuario {
+  margin-left: 20px;
+  position: relative;
+}
+
+.usuario-icono {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.usuario-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.usuario-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.usuario-dropdown li {
+  margin-bottom: 10px;
+}
+
+.usuario-dropdown a {
+  text-decoration: none;
+  color: #333;
+}
+
+.usuario-dropdown a:hover {
+  color: #4CAF50;
+}
+
+.usuario-icono:hover+.usuario-dropdown {
+  display: block;
+}
+
+.usuario-dropdown:hover {
+  display: block;
+}
+
+/* Estilos para el efecto Neumorphism */
+.navbar {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  border-radius: 0px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.navbar .logo {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+}
+
+.navbar .menu-item {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+}
+
+.menu-item:hover {
+  color: white;
+  background: linear-gradient(145deg, #636363, #636363);
+}
+
+.navbar .usuario-icono {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+}
 
 
-  /* Estilos personalizados para el botón neomorfista */
-  .btn-neomorph {
-    background-color: #e0e0e0; /* Color de fondo suave */
-    border-radius: 12px;
-    box-shadow: 18px 18px 15px #bebebe,
-                -8px -8px 15px #ffffff;
-    border: none;
-    color: #333;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight:bold ;
-  }
+.usuario {
+  display: block;
+  position: relative;
+}
 
-  .btn-neomorph a {
-    color: #333;
-    text-decoration: none;
-  }
+.usuario-icono {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
 
-  /* Efecto al hacer hover: el botón parece "levantarse" */
-  .btn-neomorph:hover {
-    box-shadow: 4px 4px 10px #bebebe,
-                -4px -4px 10px #ffffff;
-    background-color: #bff578;
-  }
-  /* Efecto al hacer clic: el botón parece "presionado" */
-  .btn-neomorph:active {
-    box-shadow: inset 4px 4px 10px #bebebe,
-                inset -4px -4px 10px #ffffff;
-  }
+.usuario-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.usuario-icono:hover+.usuario-dropdown {
+  display: block;
+}
+
+.usuario-dropdown:hover {
+  display: block;
+}
+
+/* Main */
+main {
+  position: relative;
+}
+
+.containerText {
+  width: 80%;
+  height: auto;
+  margin: 3rem auto 0 auto;
+  text-align: center;
+  border-radius: 50px;
+  color: var(--letras);
+  background: var(--color-principal);
+  box-shadow: inset 0 0 0 color;
+  box-shadow: 6px 6px 0px #bebebe,
+    -6px -6px 0px #ffffff;
+}
+
+.containerText h1 {
+  margin-top: 1rem;
+}
+
+.containerTextLeft {
+  max-width: 500px;
+  height: 200px;
+  /* modificar despues de agragar contenido*/
+  margin: 4rem auto 0 0px;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: var(--color-principal);
+  box-shadow: 6px 6px 0px #bebebe,
+    -6px -6px 0px #ffffff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.flexRight {
+  height: auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #4CAF50;
+}
+
+.containerTextRight {
+  max-width: 600px;
+  max-height: 400px;
+  /* modificar despues de agragar contenido*/
+  margin: 4rem auto 0 0px;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: var(--color-principal);
+  box-shadow: 6px 6px 0px #bebebe,
+    -6px -6px 0px #ffffff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.beneficios-container {
+  max-width: 300px;
+  margin: 0 0 0 2rem;
+}
+
+.card-body {
+  max-width: 500px;
+  max-height: 150px;
+}
+
+
+
+/* Estilos personalizados para el botón neomorfista */
+.btn-neomorph {
+  background-color: #e0e0e0;
+  /* Color de fondo suave */
+  border-radius: 12px;
+  box-shadow: 18px 18px 15px #bebebe,
+    -8px -8px 15px #ffffff;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-neomorph a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Efecto al hacer hover: el botón parece "levantarse" */
+.btn-neomorph:hover {
+  box-shadow: 4px 4px 10px #bebebe,
+    -4px -4px 10px #ffffff;
+  background-color: #bff578;
+}
+
+/* Efecto al hacer clic: el botón parece "presionado" */
+.btn-neomorph:active {
+  box-shadow: inset 4px 4px 10px #bebebe,
+    inset -4px -4px 10px #ffffff;
+}
+
+.ContainerCat {
+  position: absolute;
+  width: 140px;
+  height: 155px;
+  z-index: 2;
+  top: 0px;
+  left: 140px;
+}
+
+.GatAnimated {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+
+}
+
+@media screen and (max-width: 1207px) {
   .ContainerCat {
-    position: absolute;
-    width: 140px;
-    height: 155px;
-    z-index: 2;
-    top: 0px;
-    left: 140px;
+    display: none;
   }
-
-  .GatAnimated {
-    margin: 0 auto;
-    width: 100%; 
-    height: auto;
-
-  }
+}
